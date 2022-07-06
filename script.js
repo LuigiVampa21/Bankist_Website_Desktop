@@ -111,3 +111,28 @@ console.log(h1.children);
 console.log(h1.parentNode);
 console.log(h1.parentElement);
 // console.log(h1.parentNode);
+
+const tabs = document.querySelectorAll('.operations__tab');
+console.log(tabs);
+const tabsContainer = document.querySelector('.operations__tab-container');
+console.log(tabsContainer);
+const tabsContent = document.querySelectorAll('.operations__content');
+console.log(tabsContent);
+
+tabsContainer.addEventListener('click', e => {
+  const currentDataAtt = e.target.closest('button').dataset.tab;
+  if (!e.target.closest('button').dataset.tab) return;
+  e.target.closest('button').classList.add('operations__tab--active');
+  console.log(tabsContainer);
+  const arrayTabs = [...tabs];
+  console.log(arrayTabs);
+  arrayTabs.forEach(t => {
+    if (t != e.target) t.classList.remove('operations__tab--active');
+  });
+  const currentContent = document.querySelector(
+    `.operations__content--${currentDataAtt}`
+  );
+  console.log(currentContent);
+  tabsContent.forEach(tC => tC.classList.remove('operations__content--active'));
+  currentContent.classList.add('operations__content--active');
+});
