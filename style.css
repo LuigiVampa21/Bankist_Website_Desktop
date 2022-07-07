@@ -98,7 +98,6 @@ p {
   color: #666;
 }
 
-
 button:focus {
   outline: none;
 }
@@ -122,7 +121,6 @@ img {
   z-index: 100;
 }
 
-/* nav and stickly class at the same time */
 .nav.sticky {
   position: fixed;
   background-color: rgba(255, 255, 255, 0.95);
@@ -314,8 +312,6 @@ h4 {
 
 .operations__content {
   display: none;
-
-  /* JUST PRESENTATIONAL */
   font-size: 1.7rem;
   padding: 2.5rem 7rem 6.5rem 7rem;
 }
@@ -447,8 +443,8 @@ h4 {
   cursor: pointer;
   transition: all 0.5s;
 
-  /* Only necessary when overlying images */
-  /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
+
+  box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7);
 }
 
 .dots__dot:last-child {
@@ -458,6 +454,7 @@ h4 {
 .dots__dot--active {
   /* background-color: #fff; */
   background-color: #888;
+  transform: scale(1.2, 1.2);
   opacity: 1;
 }
 
